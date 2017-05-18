@@ -7,5 +7,5 @@ custom_resources = tests/certs/
 shared_state = 1
 
 [library]
-include_dirs = luasec tests
+include_dirs = luasec
 
