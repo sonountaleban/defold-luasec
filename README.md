@@ -10,4 +10,4 @@ https://github.com/sonountaleban/defold-luasec/archive/master.zip
 For the usage see the [Brunoos' documentation](https://github.com/brunoos/luasec/wiki) please.
 
 ## Limitations
-This module is available for all platforms that are currently supported by [Native Extensions (http://www.defold.com/manuals/extensions/).
+This module is available for all platforms that are currently supported by [Native Extensions] (http://www.defold.com/manuals/extensions/).
