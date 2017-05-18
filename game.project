@@ -3,13 +3,9 @@ title = LuaSecProject
 version = 0.4
 custom_resources = tests/certs/
 
-[display]
-width = 1280
-height = 720
-
-[physics]
-scale = 0.02
-
 [script]
 shared_state = 1
+
+[library]
+include_dirs = luasec tests
 
