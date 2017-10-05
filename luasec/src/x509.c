@@ -11,7 +11,7 @@
 
 #if defined(WIN32)
 #include <ws2tcpip.h>
-#include <windows.h>
+//#include <windows.h>
 #else
 #include <sys/types.h>
 #include <sys/socket.h>

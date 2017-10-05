@@ -1,4 +1,9 @@
 // include the Defold SDK
+#if defined(WIN32)
+#include <Winsock2.h>
+#include <windows.h>
+#endif
+
 #include <dmsdk/sdk.h>
 
 #include "config.h"

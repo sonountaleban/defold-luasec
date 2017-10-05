@@ -22,4 +22,10 @@ platforms:
             linkFlags:  ["-w"]
             libs:       []
   
-          
+    x86-win32:
+        context:
+            libs:       ["Crypt32.Lib"]
+
+    x86_64-win32:
+        context:
+            libs:       ["Crypt32.Lib"]

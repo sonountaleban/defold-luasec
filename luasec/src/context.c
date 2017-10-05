@@ -10,7 +10,8 @@
 #include <string.h>
 
 #if defined(WIN32)
-#include <windows.h>
+#include <Winsock2.h>
+//#include <windows.h>
 #endif
 
 #include "openssl/ssl.h"
