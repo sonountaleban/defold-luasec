@@ -1,12 +1,15 @@
-// include the Defold SDK
+
+
 #if defined(WIN32)
 #include <Winsock2.h>
 #include <windows.h>
 #endif
 
+// include the Defold SDK
 #include <dmsdk/sdk.h>
-
 #include "config.h"
+
+#if defined(DM_PLATFORM_HTML5) != true
 #include "ssl.h"
 #include "context.h"
 #include "x509.h"
@@ -60,3 +63,31 @@ dmExtension::Result FinalizeMyExtension(dmExtension::Params* params)
 // DM_DECLARE_EXTENSION(symbol, name, app_init, app_final, init, update, on_event, final)
 
 DM_DECLARE_EXTENSION(LuaSec, LIB_NAME, AppInitializeMyExtension, AppFinalizeMyExtension, InitializeMyExtension, 0, 0, FinalizeMyExtension)
+
+#else
+	
+
+
+dmExtension::Result AppInitializeMyExtension(dmExtension::AppParams* params)
+{
+    return dmExtension::RESULT_OK;
+}
+
+dmExtension::Result InitializeMyExtension(dmExtension::Params* params)
+{
+    return dmExtension::RESULT_OK;
+}
+
+dmExtension::Result AppFinalizeMyExtension(dmExtension::AppParams* params)
+{
+    return dmExtension::RESULT_OK;
+}
+
+dmExtension::Result FinalizeMyExtension(dmExtension::Params* params)
+{
+    return dmExtension::RESULT_OK;
+}
+
+DM_DECLARE_EXTENSION(LuaSec, LIB_NAME, AppInitializeMyExtension, AppFinalizeMyExtension, InitializeMyExtension, 0, 0, FinalizeMyExtension)
+#endif
+
